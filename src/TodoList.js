@@ -48,40 +48,47 @@ const TodoList = () => {
     </View>
   );
 };
-
 const styles = StyleSheet.create({
   container: {
     padding: 20,
+    backgroundColor: '#f0f4f8', // Fondo general
+    flex: 1,
   },
   header: {
-    fontSize: 28,
+    fontSize: 30,
     fontWeight: 'bold',
-    marginBottom: 15,
-    color: '#333',
+    marginBottom: 20,
+    color: '#1e90ff', // Azul vibrante
     textAlign: 'center',
   },
   input: {
     borderWidth: 1,
-    borderColor: '#bbb',
+    borderColor: '#4CAF50', // Verde brillante
     padding: 12,
     marginBottom: 15,
-    borderRadius: 8,
-    backgroundColor: '#fff',
-    fontSize: 16,
+    borderRadius: 12,
+    backgroundColor: '#ffffff',
+    fontSize: 18,
+    shadowColor: '#000', // Sombra
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
   },
   taskContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: '#f9f9f9',
-    padding: 12,
-    borderRadius: 8,
-    marginVertical: 6,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
-    elevation: 2, // para Android
+    backgroundColor: '#ffffff',
+    padding: 15,
+    borderRadius: 12,
+    marginVertical: 10,
+    shadowColor: '#000', // Sombra para tarjetas
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 3, // Para Android
+    borderLeftWidth: 4,
+    borderLeftColor: '#1e90ff', // Marca visual en el lateral
   },
   task: {
     fontSize: 18,
@@ -90,9 +97,20 @@ const styles = StyleSheet.create({
   },
   completedTask: {
     textDecorationLine: 'line-through',
-    color: '#4CAF50',
+    color: '#6c757d', // Color gris suave para tareas completadas
     fontStyle: 'italic',
   },
+  button: {
+    marginVertical: 15,
+    borderRadius: 8,
+    backgroundColor: '#1e90ff', // Botón azul vibrante
+  },
+  buttonTitle: {
+    color: '#fff',
+    fontSize: 18,
+    textAlign: 'center',
+    padding: 10,
+    fontWeight: 'bold',
+  },
 });
-
 export default TodoList;
